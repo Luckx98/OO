@@ -10,7 +10,7 @@ public class Cliente {
 	private String email;
 
 	public Cliente(Pessoa nc, Pessoa dnc, Pessoa cc, String ci, String es, String em) {
-		// Criamos dessa forma para que no main não haja conflito de variável
+		// Criamos dessa forma para que no main não haja conflito de variável.
 		nomeCliente = nc;
 		dataNascCliente = dnc;
 		cpfCliente = cc;

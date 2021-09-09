@@ -20,7 +20,7 @@ public class Filme {
 		idiomas = id;
 		// nf equivale ao nome do filme, es a estreia, du a duracao do filme
 		// ge euqivale ao genero do filme, si a sinopse e id ao idioma
-		// Criamos dessa forma para que no main não haja conflito de variável
+		// Criamos dessa forma para que no main não haja conflito de variável.
 	}
 	
 
