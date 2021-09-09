@@ -9,7 +9,7 @@ public class Ingresso {
 	private int sessao;
 	
 	public Ingresso(String t, double p, String po, int s) {
-		// Criamos dessa forma para que no main não haja conflito de variável.
+		// Criamos dessa forma para que no main não haja conflito de variável
 		tipo = t;
 		preco = p;
 		poltrona = po;
