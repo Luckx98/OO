@@ -12,7 +12,7 @@ public abstract class Pessoa {
 
 	public Pessoa(String np, Date dn, int c) {
 		// np equivale ao nome pessoal, dn data de nascimento e o c cpf mesmo
-		// Criamos dessa forma para que no main não haja conflito de variável.
+		// Criamos dessa forma para que no main não haja conflito de variável
 		nome = np;
 		dataNasc = dn;
 		cpf = c;
