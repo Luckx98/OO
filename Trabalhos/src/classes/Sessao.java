@@ -12,7 +12,7 @@ public class Sessao {
 		sala = sa;
 		horario = ho;
 		ingresso = in;
-		//Criando assim  para que não tenha conflito com as variáveis na main..
+		//Criando assim  para que não tenha conflito com as variáveis na main
 	}
 
 	public Filme getFilme() {
