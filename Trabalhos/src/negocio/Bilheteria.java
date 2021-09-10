@@ -1,15 +1,23 @@
 package negocio;
 
 public class Bilheteria {
+
     private Sessao[] sessao;
+
     private Cliente cliente;
+
     private Funcionario funcionario;
+
   
     public Bilheteria(Sessao[] s, Cliente c, Funcionario f){
         sessao = s;
         cliente = c;
         funcionario = f;
-        }
+    }
+
+    public void buscarFilmes() {
+        System.out.println(sessao);
+    }
 
     public Sessao[] getSessao() {
         return sessao;
