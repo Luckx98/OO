@@ -1,5 +1,4 @@
-package classes;
-
+package negocio;
 
 public class Ingresso {
 
