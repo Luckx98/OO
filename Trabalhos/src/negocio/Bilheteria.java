@@ -15,6 +15,7 @@ public class Bilheteria {
         funcionario = f;
     }
 
+    // Metodo para buscar os presentes
     public void buscarFilmes() {
         System.out.println(sessao);
     }
