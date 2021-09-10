@@ -17,7 +17,15 @@ public class Bilheteria {
 
     // Metodo para buscar os presentes
     public void buscarFilmes() {
-        System.out.println(sessao);
+       System.out.println();//criar array para lista com todos os filmes
+    }
+
+    public void buscarSessoes(){
+       System.out.println();//criar array para lista com todas sessões
+    }
+
+    public void comprar(){
+
     }
 
     public Sessao[] getSessao() {

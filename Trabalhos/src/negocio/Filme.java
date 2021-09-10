@@ -20,7 +20,12 @@ public class Filme {
 		// ge euqivale ao genero do filme, si a sinopse e id ao idioma
 		// Criamos dessa forma para que no main não haja conflito de variável
 	}
-	
+	@Override
+	public String toString() {
+		return "Filme: "+ nome +"\n Estreia: "+ estreia
+		+"\n Duracao: "+ duracao +"\n Genero: "+ genero
+		+"\n Idiomas: "+ idiomas;
+	}
 
 	public String getNome() {
 		return nome;
@@ -70,11 +75,6 @@ public class Filme {
 		this.idiomas = idiomas;
 	}
 
-	@Override
-	public String toString() {
-		return "Filme: "+ nome +"\n Estreia: "+ estreia
-		+"\n Duracao: "+ duracao +"\n Genero: "+ genero
-		+"\n Idiomas: "+ idiomas;
-	}
-
+	
+	
 }
