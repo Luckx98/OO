@@ -1,28 +1,31 @@
-package classes;
+package negocio;
 
-import java.util.Date;
+import java.util.*;
 
 public class Filme {
-	
+
 	private String nome;
 	private Date estreia;
 	private double duracao;
 	private String genero;
-	private String sinopse;
 	private String idiomas;
 	
-	public Filme(String nf, Date es, double du, String ge, String si, String id) {
+	public Filme(String nf, Date es, double du, String ge, String id) {
 		nome = nf;
 		estreia =  es;
 		duracao = du;
 		genero = ge;
-		sinopse = si;
 		idiomas = id;
 		// nf equivale ao nome do filme, es a estreia, du a duracao do filme
 		// ge euqivale ao genero do filme, si a sinopse e id ao idioma
 		// Criamos dessa forma para que no main não haja conflito de variável
 	}
-	
+	@Override
+	public String toString() {
+		return "Filme: "+ nome +"\n Estreia: "+ estreia
+		+"\n Duracao: "+ duracao +"\n Genero: "+ genero
+		+"\n Idiomas: "+ idiomas;
+	}
 
 	public String getNome() {
 		return nome;
@@ -63,17 +66,6 @@ public class Filme {
 		this.genero = genero;
 	}
 
-
-	public String getSinopse() {
-		return sinopse;
-	}
-
-
-	public void setSinopse(String sinopse) {
-		this.sinopse = sinopse;
-	}
-
-
 	public String getIdiomas() {
 		return idiomas;
 	}
@@ -83,5 +75,6 @@ public class Filme {
 		this.idiomas = idiomas;
 	}
 
-
+	
+	
 }
