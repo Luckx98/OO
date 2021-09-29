@@ -1,4 +1,6 @@
 package modelo;
+import java.util.*;
+
 
 public class Funcionario {
     
@@ -38,6 +40,7 @@ public class Funcionario {
 
 	public void setCpfFunc(Pessoa cpfFunc) {
 		this.cpfFunc = cpfFunc;
+
 	}
 
 	public String getHorario() {
@@ -48,7 +51,9 @@ public class Funcionario {
 		this.horario = horario;
 	}
 
+
     public int setCodigoId() {
+
         return codigoId;
     }
 

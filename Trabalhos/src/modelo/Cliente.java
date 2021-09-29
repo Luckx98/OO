@@ -1,19 +1,22 @@
 package modelo;
 
-public class Cliente {
-	
-	private Pessoa nomeCliente;
-	private Pessoa dataNascCliente;
-	private Pessoa cpfCliente;
+import java.util.*;
+
+public class Cliente extends Pessoa {
 	private String cidade;
 	private String estado;
 	private String email;
+  private Pessoa nomeCliente;
+	private Pessoa dataNascCliente;
+	private Pessoa cpfCliente;
 
 	public Cliente(Pessoa nc, Pessoa dnc, Pessoa cc, String ci, String es, String em) {
 		// Criamos dessa forma para que no main não haja conflito de variável
 		nomeCliente = nc;
 		dataNascCliente = dnc;
 		cpfCliente = cc;
+
+
 		cidade =  ci;
 		estado = es;
 		email = em;
@@ -41,6 +44,7 @@ public class Cliente {
 
 	public void setCpfCliente(Pessoa cpfCliente) {
 		this.cpfCliente = cpfCliente;
+
 	}
 
 	public String getCidade() {
@@ -68,3 +72,4 @@ public class Cliente {
 	}
 
 }
+
