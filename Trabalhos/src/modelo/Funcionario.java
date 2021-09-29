@@ -1,42 +1,46 @@
 package modelo;
-
 import java.util.*;
 
-public class Funcionario extends Pessoa  {
+
+public class Funcionario {
     
+    private Pessoa nomeFunc;
+    private Pessoa dataNascFunc;
+    private Pessoa cpfFunc;
     private String horario;
     private int codigoId;
 
-    public Funcionario(String n, Date d, int c, String h, int id){
-        nome = n;
-		dataNasc = d;
-		cpf = c;
-		horario = h;
-        codigoId = id;
+    public Funcionario(Pessoa nf, Pessoa df, Pessoa cf, String h, int cd){
+        nomeFunc = nf;
+        dataNascFunc = df;
+        cpfFunc = cf;
+        horario = h;
+        codigoId = cd;
     }
 
-	public String getNome() {
-		return nome;
+    public Pessoa getNomeFunc() {
+		return nomeFunc;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeFunc(Pessoa nomeFunc) {
+		this.nomeFunc = nomeFunc;
 	}
 
-	public Date getDataNascimento() {
-		return dataNasc;
+	public Pessoa getDataNascFunc() {
+		return dataNascFunc;
 	}
 
-	public void setDataNascimento(Date dataNasc) {
-		this.dataNasc = dataNasc;
+	public void setDataNascFunc(Pessoa dataNascFunc) {
+		this.dataNascFunc = dataNascFunc;
 	}
 
-	public int getCPF() {
-		return cpf;
+	public Pessoa getCpfFunc() {
+		return cpfFunc;
 	}
 
-	public void setCPF(int cpf) {
-		this.cpf = cpf;
+	public void setCpfFunc(Pessoa cpfFunc) {
+		this.cpfFunc = cpfFunc;
+
 	}
 
 	public String getHorario() {
@@ -47,7 +51,9 @@ public class Funcionario extends Pessoa  {
 		this.horario = horario;
 	}
 
-    public int getCodigoId() {
+
+    public int setCodigoId() {
+
         return codigoId;
     }
 

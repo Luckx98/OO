@@ -6,39 +6,45 @@ public class Cliente extends Pessoa {
 	private String cidade;
 	private String estado;
 	private String email;
+  private Pessoa nomeCliente;
+	private Pessoa dataNascCliente;
+	private Pessoa cpfCliente;
 
-	public Cliente(String n, Date d, int c, String ci, String es, String em) {
+	public Cliente(Pessoa nc, Pessoa dnc, Pessoa cc, String ci, String es, String em) {
 		// Criamos dessa forma para que no main não haja conflito de variável
-		nome = n;
-		dataNasc = d;
-		cpf = c;
+		nomeCliente = nc;
+		dataNascCliente = dnc;
+		cpfCliente = cc;
+
+
 		cidade =  ci;
 		estado = es;
 		email = em;
 	}
 
-	public String getNome() {
-		return nome;
+	public Pessoa getNomeCliente() {
+		return nomeCliente;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeCliente(Pessoa nomeCliente) {
+		this.nomeCliente = nomeCliente;
 	}
 
-	public Date getDataNascimento() {
-		return dataNasc;
+	public Pessoa getDataNascCliente() {
+		return dataNascCliente;
 	}
 
-	public void setDataNascimento(Date dataNasc) {
-		this.dataNasc = dataNasc;
+	public void setDataNascCliente(Pessoa dataNascCliente) {
+		this.dataNascCliente = dataNascCliente;
 	}
 
-	public int getCPF() {
-		return cpf;
+	public Pessoa getCpfCliente() {
+		return cpfCliente;
 	}
 
-	public void setCPF(int cpf) {
-		this.cpf = cpf;
+	public void setCpfCliente(Pessoa cpfCliente) {
+		this.cpfCliente = cpfCliente;
+
 	}
 
 	public String getCidade() {
@@ -64,7 +70,6 @@ public class Cliente extends Pessoa {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
 
 }
+
