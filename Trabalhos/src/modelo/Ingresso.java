@@ -1,18 +1,41 @@
 package modelo;
 
 public class Ingresso {
-
+	
 	private String tipo;
 	private double preco;
 	private String poltrona;
-	private int sessao;
+	private int sala;
+	private Filme filme;
 	
-	public Ingresso(String t, double p, String po, int s) {
+	
+	public Ingresso(Cliente c, String t, double p, String po, int s) {
 		// Criamos dessa forma para que no main não haja conflito de variável
 		tipo = t;
 		preco = p;
 		poltrona = po;
-		sessao = s;
+		sala = s;
+		
+	}
+
+	public String toString(){
+		return "Tipo de ingresso: " + tipo + ", no valor de: R$ " + preco + ". Assento " + poltrona + " na sala " + sala;
+	}
+	
+	public Filme getFilme() {
+		return filme;
+	}
+
+	public void setFilme(Filme filme) {
+		this.filme = filme;
+	}
+
+	public int getSala() {
+		return sala;
+	}
+
+	public void setSala(int sala) {
+		this.sala = sala;
 	}
 
 	public String getTipo() {
@@ -37,14 +60,6 @@ public class Ingresso {
 
 	public void setPoltrona(String poltrona) {
 		this.poltrona = poltrona;
-	}
-
-	public int getSessao() {
-		return sessao;
-	}
-
-	public void setSessao(int sessao) {
-		this.sessao = sessao;
 	}
 
 }

@@ -15,6 +15,10 @@ public class Funcionario extends Pessoa  {
         codigoId = id;
     }
 
+	public String toString(){
+		return "Nome d@ funcionário " + nome + ", código identificador: " + codigoId;
+	}
+
 	public String getNome() {
 		return nome;
 	}

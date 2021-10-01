@@ -10,7 +10,7 @@ public class Filme {
 	private String genero;
 	private String idiomas;
 	
-	public Filme(String nf, Date es, double du, String ge, String id) {
+	public Filme(String nf, Date es, double du, String ge, String id, double nh) {
 		nome = nf;
 		estreia =  es;
 		duracao = du;
@@ -20,13 +20,14 @@ public class Filme {
 		// ge euqivale ao genero do filme, si a sinopse e id ao idioma
 		// Criamos dessa forma para que no main não haja conflito de variável
 	}
+	
 	@Override
 	public String toString() {
 		return "Filme: "+ nome +"\n Estreia: "+ estreia
 		+"\n Duracao: "+ duracao +"\n Genero: "+ genero
 		+"\n Idiomas: "+ idiomas;
 	}
-
+	
 	public String getNome() {
 		return nome;
 	}
@@ -74,7 +75,5 @@ public class Filme {
 	public void setIdiomas(String idiomas) {
 		this.idiomas = idiomas;
 	}
-
-	
 	
 }

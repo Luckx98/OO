@@ -17,6 +17,10 @@ public class Cliente extends Pessoa {
 		email = em;
 	}
 
+	public String toString() {	
+		return "Nome do cliente: " + nome;
+	}
+
 	public String getNome() {
 		return nome;
 	}

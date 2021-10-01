@@ -1,56 +1,58 @@
 package modelo;
 
 public class Bilheteria {
+	
+	private Filme[] filmes = new Filme[10];
+	private int numFilmes = 0;
+	private Cliente cliente;
+	private int horariosDisponiveis = 3;
+	private Ingresso ingresso;
+	private double[] cronograma = new double [horariosDisponiveis];
 
-    private Sessao[] sessao;
+	public Bilheteria(Ingresso i, Cliente c) {
+		ingresso = i;
+		cliente = c;
+		//Criando assim  para que não tenha conflito com as variáveis na main.
+	}
+	
+	public Cliente getCliente() {
+		return cliente;
+	}
 
-    private Cliente cliente;
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
 
-    private Funcionario funcionario;
+	public Ingresso getIngresso() {
+		return ingresso;
+	}
 
-  
-    public Bilheteria(Sessao[] s, Cliente c, Funcionario f){
-        sessao = s;
-        cliente = c;
-        funcionario = f;
-    }
+	public void setIngresso(Ingresso ingresso) {
+		this.ingresso = ingresso;
+	}
 
-    // Metodo para buscar os presentes
-    public void buscarFilmes() {
-       System.out.println();//criar array para lista com todos os filmes
-    }
+	public double getHorario(int i){
+		return cronograma[i];
+	}
 
-    public void buscarSessoes(){
-       System.out.println();//criar array para lista com todas sessões
-    }
+	public void setArrayCronograma(double horario, int i) {
+		this.cronograma[i] = horario;
+	}
 
-    public void comprar(){
+	public String consultarFilmes(){
+		String saida = "***** Lista de Filmes ***** \n";
+		for(int i = 0; i < numFilmes; i++){
+			saida = saida +  "\n" + filmes[i].getNome();
+		} 
+		return saida;
+	}
 
-    }
-
-    public Sessao[] getSessao() {
-        return sessao;
-    }
-        
-    public void setSessao(Sessao[] sessao) {
-        this.sessao = sessao;
-    }
-        
-    public Funcionario getFuncionario() {
-        return funcionario;
-    }
-        
-    public void setFuncionario(Funcionario funcionario) {
-        this.funcionario = funcionario;
-     }
-        
-    public Cliente getCliente() {
-        return cliente;
-    }
-        
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
-
+	public String consultarCronograma(int j){
+		String saida = "Horarios para o filme " + filmes[j].getNome() + ": ";
+		for(int i = 0; i<horariosDisponiveis; i++){
+			saida = saida + "\n" + getHorario(i);
+		}
+		return saida;
+	}
 
 }
