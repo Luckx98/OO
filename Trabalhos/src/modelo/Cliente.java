@@ -1,20 +1,32 @@
 package modelo;
 
-import java.util.*;
+import java.sql.Date;
 
 public class Cliente extends Pessoa {
 	private String cidade;
 	private String estado;
 	private String email;
 
-	public Cliente(String n, Date d, int c, String ci, String es, String em) {
-		// Criamos dessa forma para que no main não haja conflito de variável
-		nome = n;
-		dataNasc = d;
-		cpf = c;
+	public Cliente(){
+		super();
+	}
+
+	//Sobrecarga
+	public Cliente(String n, Date dN, String ci, String es, String em, int cpf ) {
 		cidade =  ci;
 		estado = es;
 		email = em;
+		this.nome = n;
+		this.cpf = cpf;
+		this.dataNasc = dN;
+	}
+
+	public Cliente(String n, Date dN, String ci, String em, int cpf ) {
+		cidade =  ci;
+		email = em;
+		this.nome = n;
+		this.cpf = cpf;
+		this.dataNasc = dN;
 	}
 
 	public String toString() {	
@@ -29,20 +41,13 @@ public class Cliente extends Pessoa {
 		this.nome = nome;
 	}
 
-	public Date getDataNascimento() {
-		return dataNasc;
-	}
-
-	public void setDataNascimento(Date dataNasc) {
-		this.dataNasc = dataNasc;
-	}
-
 	public int getCPF() {
 		return cpf;
 	}
 
 	public void setCPF(int cpf) {
 		this.cpf = cpf;
+
 	}
 
 	public String getCidade() {
@@ -68,7 +73,6 @@ public class Cliente extends Pessoa {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
 
 }
+
