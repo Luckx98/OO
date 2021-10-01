@@ -2,57 +2,60 @@ package view;
 
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
-
 
 public class TelaMenu implements ActionListener {
 
-    private static JFrame janela = new JFrame("Cinema");
-    private static JLabel titulo = new JLabel("Menu Principal");
-    private static JButton sessao = new JButton("Sessoes");
+    private static JFrame frame = new JFrame();
+    private static JLabel label = new JLabel();
+    private static JButton pessoa = new JButton("Pessoa");
     private static JButton bilheteria = new JButton("Bilheteria");
 
     public TelaMenu() {
-        titulo.setFont(new Font("Arial", Font.BOLD, 20));
-        sessao.setFont(new Font("Arial", Font.CENTER_BASELINE, 15));
+
+        //Criando a label do titulo
+        label.setText("Menu Principal");
+        label.setForeground(new Color(0x4B0082));
+        label.setFont(new Font("Arial", Font.BOLD, 20));
+        label.setBounds(320, 30, 190, 60);
+
+        //Botão para selecionar cliente ou fundionário
+        pessoa.setFont(new Font("Arial", Font.CENTER_BASELINE, 15));
+        pessoa.setBounds(310, 160, 180, 40);
+
+        //Botão da bilheteria
         bilheteria.setFont(new Font("Arial", Font.CENTER_BASELINE, 15));
+        bilheteria.setBounds(310, 100, 180, 40);
 
-        titulo.setBounds(330, 30, 180, 50);
-        sessao.setBounds(330, 160, 180, 50);
-        bilheteria.setBounds(330, 100, 180, 50);
-
-        janela.setLayout(null);
-
-        janela.add(titulo);
-        janela.add(sessao);
-        janela.add(bilheteria);
-
-        janela.setSize(800, 500);
-        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        janela.setVisible(true);
+        //Janela principal
+        frame.add(label);
+        frame.add(pessoa);
+        frame.add(bilheteria);
+        
+        frame.setTitle("Cinema");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(null);
+        frame.setSize(800, 500);
+        frame.setVisible(true);
     }
 
     public static void main(String[] args) {
         TelaMenu menu = new TelaMenu();
 
-        sessao.addActionListener(menu);
+        pessoa.addActionListener(menu);
         bilheteria.addActionListener(menu);
     }
 
     public void actionPerformed(ActionEvent e) {
         Object src = e.getSource();
 
-        if (src == sessao)
+        if (src == pessoa)
+            // TelaSessao viewSessao = new TelaSessao();
             JOptionPane.showMessageDialog(null,
-                "As funcionalidades ainda precisam ser aplicadas\n" 
-                + "relacionadas a sessões", null,
-                JOptionPane.INFORMATION_MESSAGE);
+                    "As funcionalidades ainda precisam ser aplicadas\n" + "relacionadas a sessões", null,
+                    JOptionPane.INFORMATION_MESSAGE);
 
         if (src == bilheteria)
-            JOptionPane.showMessageDialog(null,
-                "As funcionalidades ainda precisam ser aplicadas\n" 
-                + "relacionadas a bilheteria", null,
-                JOptionPane.INFORMATION_MESSAGE);
+            new TelaBilheteria();
     }
 }
