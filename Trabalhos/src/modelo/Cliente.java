@@ -29,10 +29,6 @@ public class Cliente extends Pessoa {
 		this.dataNasc = dN;
 	}
 
-	// public void inserirEditarCliente(Cliente cliente) {
-
-	// }
-
 	public String toString() {	
 		return "Nome do cliente: " + nome;
 	}
@@ -77,6 +73,9 @@ public class Cliente extends Pessoa {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	// public void inserirEditarCliente(Cliente c, int parseInt) {
+	// }
 
 }
 

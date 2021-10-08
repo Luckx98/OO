@@ -33,11 +33,4 @@ public class ControleDados {
         return this.d.getQntFuncionarios();
     }
 
-    // public boolean inserirEditarCliente(String[] dadosClientes) {
-    //     if(!dadosClientes[3].matches("[0-9]+") || !dadosClientes[4].matches("[0-9]+") ||
-    //     !dadosClientes[5].matches("[0-9]+") || !dadosClientes[6].matches("[0-9]+")) {
-    //         return false;
-    //     }
-    // }
-
 }
