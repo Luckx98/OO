@@ -1,5 +1,11 @@
 package modelo;
 
+/**
+ * Define características essesciais dos filmes, seus atributos e métodos
+ * @author Samuel Avila e Lucas Macedo
+ * @version 1.0 (Out 2020)
+ */
+
 import java.util.*;
 
 public class Filme {
@@ -9,6 +15,7 @@ public class Filme {
 	private double duracao;
 	private String genero;
 	private String idiomas;
+	private int idnumerico;
 	
 	public Filme(String nf, Date es, double du, String ge, String id) {
 		nome = nf;
@@ -21,13 +28,26 @@ public class Filme {
 		// Criamos dessa forma para que no main não haja conflito de variável
 	}
 	
-	@Override
+	
+	/**
+	 * Junta principais atributos da classe em uma string para se obter mais praticidade
+	 * @return string com principais atributos de um filme
+	 */
+	
 	public String toString() {
 		return "Filme: "+ nome +"\n Estreia: "+ estreia
 		+"\n Duracao: "+ duracao +"\n Genero: "+ genero
 		+"\n Idiomas: "+ idiomas;
 	}
-	
+
+	public int getIdnumerico() {
+		return idnumerico;
+	}
+
+	public void setIdnumerico(int idnumerico) {
+		this.idnumerico = idnumerico;
+	}
+
 	public String getNome() {
 		return nome;
 	}
