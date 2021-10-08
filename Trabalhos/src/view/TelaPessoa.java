@@ -1,9 +1,9 @@
 package view;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.*;
-
 
 import controle.ControleClientes;
 import controle.ControleDados;
@@ -13,11 +13,11 @@ public class TelaPessoa implements ActionListener, ListSelectionListener {
     private JLabel titulo;
     private JButton cadastroCliente;
     private JButton refreshCliente;
-    private JButton cadastroFunc;
-    private JButton refreshFunc;
+    // private JButton cadastroFunc;
+    // private JButton refreshFunc;
     private static ControleDados dados;
     private JList<String> listaClienteCadastrados;
-    private JList<String> listaFuncCadastrados;
+    // private JList<String> listaFuncCadastrados;
     private String[] listaNomes = new String[59];
 
     public void mostrarDados(ControleDados d, int op) {
@@ -34,7 +34,7 @@ public class TelaPessoa implements ActionListener, ListSelectionListener {
 
                 titulo.setFont(new Font("Arial", Font.BOLD, 20));
                 titulo.setBounds(90, 10, 250, 30);
-                listaClienteCadastrados.setBounds(20, 50, 150, 120);
+                listaClienteCadastrados.setBounds(20, 50, 350, 120);
                 listaClienteCadastrados.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
                 listaClienteCadastrados.setVisibleRowCount(10);
 
@@ -48,27 +48,44 @@ public class TelaPessoa implements ActionListener, ListSelectionListener {
                 frame.add(cadastroCliente);
                 frame.add(refreshCliente);
 
-                frame.setSize(400,250);
+                frame.setSize(400, 250);
                 frame.setVisible(true);
 
                 cadastroCliente.addActionListener(this);
                 refreshCliente.addActionListener(this);
                 listaClienteCadastrados.addListSelectionListener(this);
-                
+
                 break;
+
+            default:
+                JOptionPane.showMessageDialog(null, "Opção não encontrada!", null, JOptionPane.ERROR_MESSAGE);
+
         }
     }
 
-    @Override
-    public void valueChanged(ListSelectionEvent e) {
-        // TODO Auto-generated method stub
-        
+    // Captura eventos relacionados aos botões da interface
+    public void actionPerformed(ActionEvent e) {
+        Object src = e.getSource();
+
+        // Cadastro de novo cliente
+        if (src == cadastroCliente) {
+            new TelaDetalhePessoa().inserirEditar(1, dados, this, 0);
+        }
+        // Atualiza a lista de nomes de alunos mostrado no JList
+        if (src == refreshCliente) {
+            listaClienteCadastrados.setListData(new ControleClientes(dados).getNomeClientes());
+            listaClienteCadastrados.updateUI();
+        }
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
-        
+    // Captura eventos relacionados ao JList
+    public void valueChanged(ListSelectionEvent e) {
+        Object src = e.getSource();
+
+        if (e.getValueIsAdjusting() && src == listaClienteCadastrados) {
+            new TelaDetalhePessoa().inserirEditar(3, dados, this, listaClienteCadastrados.getSelectedIndex());
+        }
+
     }
 
 }

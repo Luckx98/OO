@@ -4,12 +4,15 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+import controle.*;
+
 public class TelaMenu implements ActionListener {
 
     private static JFrame frame = new JFrame();
     private static JLabel label = new JLabel();
     private static JButton pessoa = new JButton("Pessoa");
     private static JButton bilheteria = new JButton("Bilheteria");
+    public static ControleDados dados = new ControleDados();
 
     public TelaMenu() {
 
@@ -50,10 +53,11 @@ public class TelaMenu implements ActionListener {
         Object src = e.getSource();
 
         if (src == pessoa)
+            new TelaPessoa().mostrarDados(dados,1);
             // TelaSessao viewSessao = new TelaSessao();
-            JOptionPane.showMessageDialog(null,
-                    "As funcionalidades ainda precisam ser aplicadas\n" + "relacionadas a sessões", null,
-                    JOptionPane.INFORMATION_MESSAGE);
+            // JOptionPane.showMessageDialog(null,
+            //         "As funcionalidades ainda precisam ser aplicadas\n" + "relacionadas a sessões", null,
+            //         JOptionPane.INFORMATION_MESSAGE);
 
         if (src == bilheteria)
             new TelaBilheteria();
