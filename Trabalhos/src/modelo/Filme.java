@@ -10,7 +10,7 @@ public class Filme {
 	private String genero;
 	private String idiomas;
 	
-	public Filme(String nf, Date es, double du, String ge, String id, double nh) {
+	public Filme(String nf, Date es, double du, String ge, String id) {
 		nome = nf;
 		estreia =  es;
 		duracao = du;

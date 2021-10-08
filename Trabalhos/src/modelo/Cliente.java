@@ -12,13 +12,13 @@ public class Cliente extends Pessoa {
 	}
 
 	//Sobrecarga
-	public Cliente(String n, Date dN, String ci, String es, String em, int cpf ) {
+	public Cliente(String n, java.util.Date d, String ci, String es, String em, int cpf ) {
 		cidade =  ci;
 		estado = es;
 		email = em;
 		this.nome = n;
 		this.cpf = cpf;
-		this.dataNasc = dN;
+		this.dataNasc = d;
 	}
 
 	public Cliente(String n, Date dN, String ci, String em, int cpf ) {

@@ -9,13 +9,11 @@ public class Ingresso {
 	private Filme filme;
 	
 	
-	public Ingresso(Cliente c, String t, double p, String po, int s) {
-		// Criamos dessa forma para que no main não haja conflito de variável
+	public Ingresso(String t, double p, String po, int s) {
 		tipo = t;
 		preco = p;
 		poltrona = po;
 		sala = s;
-		
 	}
 
 	public String toString(){
