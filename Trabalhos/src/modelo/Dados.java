@@ -1,5 +1,11 @@
 package modelo;
 
+/**
+ * Define dados pré-cadastrados.
+ * @author Samuel Avila e Lucas Macedo
+ * @version 1.0 (Out 2020)
+ */
+
 import java.util.*;
 
 public class Dados {

@@ -1,5 +1,11 @@
 package modelo;
 
+/**
+ * Proporciona para o cliente a lista de filmes, horários e ingressos para que ele efetue a compra
+ * @author Samuel Avila e Lucas Macedo
+ * @version 1.0 (Out 2020)
+ */
+
 public class Bilheteria {
 	
 	private Filme[] filmes = new Filme[10];
@@ -29,6 +35,11 @@ public class Bilheteria {
 		this.cronograma[i] = horario;
 	}
 
+	/**
+	 * Mostra a lista de todos os filmes disponíveis
+	 * @return string que contém a lista de filmes
+	 */
+
 	public String consultarFilmes(){
 		String saida = "***** Lista de Filmes ***** \n";
 		for(int i = 0; i < numFilmes; i++){
@@ -36,6 +47,12 @@ public class Bilheteria {
 		} 
 		return saida;
 	}
+
+	/**
+	 * Mostra a lista de todos os horários para um filme específico
+	 * @param j um inteiro referente ao código numérico do filme
+	 * @return string que contém a lista de filmes
+	 */
 
 	public String consultarCronograma(int j){
 		String saida = "Horarios para o filme " + filmes[j].getNome() + ": ";

@@ -1,5 +1,11 @@
 package modelo;
 
+/**
+ * Define características essesciais dos clientes, seus atributos e métodos
+ * @author Samuel Avila e Lucas Macedo
+ * @version 1.0 (Out 2020)
+ */
+
 import java.sql.Date;
 
 public class Cliente extends Pessoa {
@@ -29,6 +35,10 @@ public class Cliente extends Pessoa {
 		this.dataNasc = dN;
 	}
 
+	/**
+	 * Forma string para exibição do atributo e identificação
+	 * @return string com atributo da classe e sua exibição
+	 */
 	public String toString() {	
 		return "Nome do cliente: " + nome;
 	}
