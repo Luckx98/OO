@@ -1,5 +1,11 @@
 package modelo;
 
+/**
+ * Define características essesciais do cliente, seus atributos e métodos
+ * @author Samuel Avila e Lucas Macedo
+ * @version 1.0 (Out 2020)
+ */
+
 public class Ingresso {
 	
 	private String tipo;
@@ -15,6 +21,11 @@ public class Ingresso {
 		poltrona = po;
 		sala = s;
 	}
+
+	/**
+	 * Forma string dos atributos da classe a serem exibidos
+	 * @return string com atributos da classe e suas identificação
+	 */
 
 	public String toString(){
 		return "Tipo de ingresso: " + tipo + ", no valor de: R$ " + preco + ". Assento " + poltrona + " na sala " + sala;

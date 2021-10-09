@@ -1,5 +1,11 @@
 package modelo;
 
+/**
+ * Define características essesciais de toda pessoa envolvida no software, seus atributos e métodos
+ * @author Samuel Avila e Lucas Macedo
+ * @version 1.0 (Out 2020)
+ */
+
 import java.util.Date;
 
 public abstract class Pessoa {
