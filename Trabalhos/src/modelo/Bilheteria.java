@@ -10,23 +10,13 @@ public class Bilheteria {
 	
 	private Filme[] filmes = new Filme[10];
 	private int numFilmes = 0;
-	private Cliente cliente;
 	private int horariosDisponiveis = 3;
 	private Ingresso ingresso;
 	private double[] cronograma = new double [horariosDisponiveis];
 
-	public Bilheteria(Ingresso i, Cliente c) {
+	public Bilheteria(Ingresso i) {
 		ingresso = i;
-		cliente = c;
 		//Criando assim  para que não tenha conflito com as variáveis na main.
-	}
-	
-	public Cliente getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
 	}
 
 	public Ingresso getIngresso() {

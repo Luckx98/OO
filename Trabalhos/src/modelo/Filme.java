@@ -15,7 +15,8 @@ public class Filme {
 	private double duracao;
 	private String genero;
 	private String idiomas;
-	private int idnumerico;
+	private int codigo;
+
 	
 	public Filme(String nf, Date es, double du, String ge, String id) {
 		nome = nf;
@@ -27,26 +28,27 @@ public class Filme {
 		// ge euqivale ao genero do filme, si a sinopse e id ao idioma
 		// Criamos dessa forma para que no main não haja conflito de variável
 	}
-	
-	
+
+
+	@Override
 	/**
 	 * Junta principais atributos da classe em uma string para se obter mais praticidade
 	 * @return string com principais atributos de um filme
 	 */
-	
 	public String toString() {
 		return "Filme: "+ nome +"\n Estreia: "+ estreia
 		+"\n Duracao: "+ duracao +"\n Genero: "+ genero
 		+"\n Idiomas: "+ idiomas;
 	}
 
-	public int getIdnumerico() {
-		return idnumerico;
+	public int getCodigo() {
+		return codigo;
 	}
 
-	public void setIdnumerico(int idnumerico) {
-		this.idnumerico = idnumerico;
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
 	}
+	
 
 	public String getNome() {
 		return nome;

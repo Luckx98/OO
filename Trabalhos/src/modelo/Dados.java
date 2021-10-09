@@ -41,6 +41,19 @@ public class Dados {
         this.clientes = clientes;
     }
 
+    public void inserirEditarCliente(Cliente c, int pos) {
+        this.clientes[pos] = c;
+        if(pos == qntClientes) qntClientes++;
+    }
+
+    public int getQntClientes() {
+        return qntClientes;
+    }
+
+    public void setQntClientes(int qntClientes) {
+        this.qntClientes = qntClientes;
+    }
+
     public Filme[] getFilmes() {
         return filmes;
     }
@@ -49,12 +62,33 @@ public class Dados {
         this.filmes = filmes;
     }
 
+    public int getQntFilmes() {
+        return qntFilmes;
+    }
+
+    public void setQntFilmes(int qntFilmes) {
+        this.qntFilmes = qntFilmes;
+    }
+
     public Funcionario[] getFuncionarios() {
         return funcionarios;
     }
 
     public void setFuncionarios(Funcionario[] funcionarios) {
         this.funcionarios = funcionarios;
+    }
+
+    public int getQntFuncionarios() {
+        return qntFuncionarios;
+    }
+
+    public void setQntFuncionarios(int qntFuncionarios) {
+        this.qntFuncionarios = qntFuncionarios;
+    }
+
+    public void inserirEditarFuncionario(Funcionario c, int pos) {
+        this.funcionarios[pos] = c;
+        if(pos == qntFuncionarios) qntFuncionarios++;
     }
 
     public Ingresso[] getIngressos() {
@@ -71,29 +105,5 @@ public class Dados {
 
     public void setQntIngressos(int qntIngressos) {
         this.qntIngressos = qntIngressos;
-    }
-
-    public int getQntFuncionarios() {
-        return qntFuncionarios;
-    }
-
-    public void setQntFuncionarios(int qntFuncionarios) {
-        this.qntFuncionarios = qntFuncionarios;
-    }
-
-    public int getQntFilmes() {
-        return qntFilmes;
-    }
-
-    public void setQntFilmes(int qntFilmes) {
-        this.qntFilmes = qntFilmes;
-    }
-
-    public int getQntClientes() {
-        return qntClientes;
-    }
-
-    public void setQntClientes(int qntClientes) {
-        this.qntClientes = qntClientes;
     }
 }
