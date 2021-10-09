@@ -100,7 +100,6 @@ public class TelaDetalhePessoa implements ActionListener {
         Object src = e.getSource();
         if(src == botaoSalvar) {
             try{
-                boolean res;
                 if(opcao == 1) { // Cadastro de Cliente
                     novoDado[0] = Integer.toString(dados.getQntClientes());
                 }else { // Edicao de dado existente
